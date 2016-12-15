@@ -1,0 +1,4 @@
+datosUsuario({
+	"nivel":"<#SESSION.NIVEL/>",
+	"pais":"<#SESSION.DEFAULT_PAIS/>"
+});

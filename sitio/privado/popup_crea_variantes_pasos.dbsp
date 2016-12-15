@@ -1,0 +1,69 @@
+ 
+     
+ 
+ 	<body id="popup-contenedor">
+		<div id="popup-container">
+			<form name="FrmReporteConfiguracion" id="FrmReporteConfiguracion" method="post" enctype="multipart/form-data" action="#">
+				<input type="hidden" id="IdReporte" name="IdReporte" value="2"/>
+				<div class="BoxInfo w100">
+					<label class="InfoLabel">Nombre*</label>
+					<input type="text" id="Nombre" name="Nombre" class="InfoObligatorio InfoData" autofocus="true" />
+				</div>
+				<div class="BoxInfo w100">
+					<div class="w40 pr5">
+						<label class="InfoLabel">Agrupar por</label>
+						<div class="InfoData">
+							<select id="Agrupacion" name="Agrupacion" class="w100 InfoObligatorio" onchange="SalesUp.Variables.Agrupacion({Valor:value});"></select>
+						</div>
+					</div>
+					<div class="w30 pl5 pr5" id="BoxPeriodicidad" style="display:none;">
+						<select id="Periodicidad" name="Periodicidad" class="w100" ></select>
+					</div>
+					<div class="w30 pl5">
+						<label class="InfoLabel">Compartir</label>
+						<select id="Compartir" name="Compartir" class="InfoData" onchange="SalesUp.Variables.CompartirCon({Valor:value});">
+							<option value="1">Solo yo</option>
+							<option value="2">Toda la empresa</option>
+							<option value="3">Ciertos grupos</option>
+						</select>
+						<input type="hidden" id="CompartirCon" name="CompartirCon" value="1"/>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="BoxInfo w100" style="display:none;height:auto;" id="CiertosGrupos">
+					<label class="InfoLabel">Grupos</label>
+				</div>
+
+				<div class="clear"></div>
+				<h3><i class="fa fa-gear fa-spin"></i> Pasos</h3>
+				<div class="clear"></div>
+
+				<div id="BoxPasos" class="BoxPasos w100">
+					
+				</div><!--/BoxPasos-->
+
+				<div id="BoxComodin" style="display:none;"></div>
+				 
+				<div class="BoxBotonesAccion w100">
+					<button type="button" id="BtnAgregarPaso" class="Btn Btn-rounded Btn-small Btn-flat-Aceptar" style="float:left;" onclick="SalesUp.Variables.AgregarPaso();" >
+						<i class="fa fa-gear"></i> Agregar paso
+					</button>
+					<button type="button" id="BtnEliminar" class="Btn Btn-rounded Btn-small Btn-flat-Aceptar" style="float:left;" onclick="SalesUp.Variables.ConfirmarEliminar();" >
+						<i class="fa fa-trash"></i> Eliminar variante 
+					</button>
+
+					<button type="button" id="BtnAceptar" class="Btn Btn-rounded Btn-small Btn-flat-Aceptar" onclick="SalesUp.Variables.GuardarDatos();">
+						<i class="fa fa-save"></i> Guardar 
+					</button>
+					<button type="button" id="BtnCancelar" class="Btn Btn-rounded Btn-small Btn-flat-Cancelar" onclick="self.parent.tb_remove();">
+						<i class="fa fa-times"></i> Cancelar 
+					</button>
+				</div> 
+				<div class="clear"></div>
+	    	</form> <!-- /form -->
+	        <div class="clear"></div>
+        </div> <!-- #popup-container -->
+	</body>
+</html>
+
+
