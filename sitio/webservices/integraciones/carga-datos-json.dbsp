@@ -1,2 +1,0 @@
-<#HEADER NAME="Content-Type" VALUE="text/json; charset=iso-8859-1;" />
-<#JSONDATASET ALIAS="SALESUPXP" SQLFILE="Integracion/CONTPAQi/sistema.sql"/>
