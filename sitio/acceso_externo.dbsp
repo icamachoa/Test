@@ -8,6 +8,7 @@
 	<script language="javascript" type="text/javascript" src="/scripts/dbsp.js"></script>
 </head>
 
+
 <body onload="document.frmlogin.submit()">     
 	  <form name="frmlogin" method="post" action="<#LOGIN ALIAS=SALESUPXP SQLFILE=Login/Query1-Autenticacion_al_sistema.sql DOC=/privado/inicializacion.dbsp/>">
 		<input type="hidden" value="<#email/>" name="email" maxlenght="128">
